@@ -387,56 +387,7 @@ header .footer{
      }
  }
 
- /*Skill  */
- #skill{
-    padding: 70px 30px;
-    background-color: #2b5876;
-    background: -webkit-linear-gradient(to right #4e4376 , #2b5876);
-    background: linear-gradient(to right #4e4374, #2b5876);
- }
 
- #skill .skill-row{
-    margin-top: 35px;
-    display: flex;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
- }
-
- #skill .skill-row .skill-box .skill-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 4px;
- }
- #skill .skill-row .skill-box .skill-info h2{
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    font-style: italic;
- }
- #skill .skill-row .skill-box .skill-outer-line{
-    width: 100%;
-    height: 10px;
-    background-color: gray;
-    border-radius: 15px;
- }
-
- #skill .skill-row .skill-box .skill-outer-line .skill-inner-line{
-    height: 10px;
-    background-color: var(--themeColor);
-    border-radius: 20px;
- }
-
- @media only screen  and(max-width:450px){
-    #skill{
-        padding: 50px 15px;
-    }
-    #skill .skill-row{
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:10px;
-    }
-    
- }
 
  /* Project */
 
@@ -577,14 +528,83 @@ header .footer{
  }
 
 
- @media only screen  and(max-width:800px){
+  /* Responsive Adjustments for Tablets */
+  @media only screen and (max-width: 800px) {
+   #contact {
+     padding: 50px 20px;
+   }
+ 
+   #contact .contact-row {
+     flex-direction: column;
+     gap: 10px;
+   }
+ 
+   #contact .contact-row .contact-left,
+   #contact .contact-row .contact-right {
+     flex-basis: 100%;
+     min-width: 100%;
+   }
+ 
+   #contact .contact-row .contact-left,
+   #contact .contact-row .contact-right {
+     padding: 20px;
+   }
+ }
+ 
+ /* Responsive Adjustments for Mobile Devices */
+ @media only screen and (max-width: 480px) {
+   #contact {
+     padding: 40px 15px;
+   }
+ 
+   #contact .contact-row {
+     gap: 0;
+   }
+ 
+   #contact .contact-row .contact-left .icon-box {
+     flex-direction: column;
+     align-items: flex-start;
+     margin: 15px 0;
+   }
+ 
+   #contact .contact-row .contact-left .icon-box .icon i {
+     width: 40px;
+     height: 40px;
+     line-height: 37px;
+     font-size: 18px;
+   }
+ 
+   #contact .contact-row .contact-left .icon-box .info h4 {
+     font-size: 18px;
+   }
+ 
+   #contact .contact-row .contact-left .icon-box .info h4 + p {
+     font-size: 14px;
+   }
+ 
+   #contact .contact-row .contact-right form input,
+   #contact .contact-row .contact-right form textarea {
+     font-size: 14px;
+     padding: 8px 15px;
+   }
+ 
+   #contact .contact-row .contact-right form input[type="submit"] {
+     font-size: 16px;
+     padding: 10px 0;
+   }
+ }
+
+
+
+ /* @media only screen  and(max-width:800px){
     #contact{
-        paddding:50px;
+        padding:50px;
     }
     #contact .contact-row{
         flex-direction: column;
         gap: 10px;
     }
+   
 
  }
 
@@ -594,7 +614,7 @@ header .footer{
     }
  }
 
-
+ */
 
 
 
